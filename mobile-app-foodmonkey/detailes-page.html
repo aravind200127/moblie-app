@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1, 
+           maximum-scale = 1, minimum-scale = 1, user-scalable = no, minimal-ui" />
+        <meta name = "apple-mobile-web-app-capable" content = "yes" />
+        <meta name = "apple-mobile-web-app-status-bar-style" content = "black" />
+        <title>My App</title>
+        <link rel = "stylesheet" 
+           href = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.min.css" />
+        <link rel = "stylesheet" 
+           href = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.colors.min.css" />
+           <link rel="stylesheet" href="yellow.css">
+           
+           <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <body>
+        <div class = "statusbar-overlay"></div>
+        <div class = "panel-overlay"></div>
+        
+        <div class = "panel panel-right panel-reveal">
+           <div class = "content-block">
+              <p>Contents goes here...</p>
+           </div>
+        </div>
+        
+        <div class = "views">
+           <div class = "view view-main">
+               <div class = "navbar navbar-fourth">
+                 <div class = "navbar-inner">
+                     
+                     <div class="left"><i class="uil uil-arrow-left"></i></div>
+                    <div class = "center sliding">Restaurant details</div>
+                    <div class = "right">
+                         <i class="uil uil-heart-alt"></i>
+                    </div>
+                 </div>
+              </div>  
+              <div class = "pages navbar-through">
+                 <div data-page = "index" class = "page">
+                    <div class = "page-content">
+                       <div class="back" >
+                        <div class="logo_n">
+                            <img src="Logo_details.png" alt="Italian Trulli">
+                        </div>
+                    
+                        <div class="reating_four">
+                            <h2 class="reatstar">Star Rating</h2>                      
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                         </div>
+                         </div>
+                         <div class=" icon_tex"><div class="row">
+                           <div class = "col-50">
+                               <i class="uil uil-info-circle information"></i> Pizza | Italian Food
+                           </div>
+                           <div class = "col-50">
+                              <div class="images-side">
+                                 <i class="uil uil-map-marker information"></i> Lektykarska 20 | 20 m
+                                 
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                         <div class="fourth_text">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'</p>
+                         </div>
+                         <div class="mapp">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497512.5774624539!2d79.87933742857086!3d13.04731685550907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1706701394301!5m2!1sen!2sin" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                         </div>
+
+                       
+                        <a href=" Browes.html" class="button button-big button-bottom">START EXPOLUR NOW</a>
+                       
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        
+        <script type = "text/javascript" 
+           src = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/js/framework7.min.js"></script>
+        
+        <script>
+           // here initialize the app
+           var myApp = new Framework7();
+  
+           // If your using custom DOM library, then save it to $$ variable
+           var $$ = Dom7;
+  
+           // Add the view
+           var mainView = myApp.addView('.view-main', {
+              
+              // enable the dynamic navbar for this view:
+              dynamicNavbar: true
+           });
+  
+           //use the 'pageInit' event handler for all pages
+           $$(document).on('pageInit', function (e) {
+           
+              //get page data from event data
+              var page = e.detail.page;
+  
+              if (page.name === 'blog') {
+              
+                 // you will get below message in alert box when page with data-page attribute is equal to "about"
+                 myApp.alert('Here its your About page');
+              }
+           })
+        </script>
+     </body>
+</body>
+</html>
